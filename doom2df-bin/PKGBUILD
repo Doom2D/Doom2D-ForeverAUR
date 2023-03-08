@@ -17,15 +17,30 @@ source=(
   'doom2df.desktop'
   'doom2df.png'
   'd2df.1.gz'
+  'd2df.2.gz'
+  'd2df.3.gz'
+  'd2df.1.ru.gz'
+  'd2df.2.ru.gz'
+  'd2df.3.ru.gz'
 )
 noextract=(
   'd2df.1.gz'
+  'd2df.2.gz'
+  'd2df.3.gz'
+  'd2df.1.ru.gz'
+  'd2df.2.ru.gz'
+  'd2df.3.ru.gz'
 )
 md5sums=(
   'SKIP'
   'a529aca738b79f2099fcef6e583fbed3'
   '191cd29a6994ab257abf6c0b1060b2fd'
-  '5542f6420d4a17f3c5059989dfcc65f3'
+  '59cf16e84a0f565375553551640b1f7d'
+  '361182e20bfc30f106719cd95b2b7819'
+  'dd542d64993023e05fb231fc899d1c1f'
+  'a9a5f2d672ea4091bb1b61383d509657'
+  '2a72b87d4d18fa3932807d4254905396'
+  'ed4e4cb20c96401514f6a813d6ef86bb'
 )
 options=(
   !strip

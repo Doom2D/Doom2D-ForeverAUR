@@ -7,7 +7,7 @@ arch=(x86_64 i686)
 url="https://doom2d.org/"
 license=('GPL3')
 group=(doom2df-full)
-depends=(doom2df-res sdl2_mixer sdl2 enet libgl)
+depends=(doom2df-res sdl2_mixer sdl2 enet libgl miniupnpc)
 makedepends=(git fpc)
 optdepends=('doom2df-editor: map editor for game')
 provides=(doom2df)
@@ -49,13 +49,13 @@ build() {
   cd "src/game"
   
   # First - main graphical binary
-  fpc -g -gl -FU../../tmp -dUSE_SDL2 -dUSE_OPENGL -dUSE_SDLMIXER Doom2DF.lpr
+  fpc -g -gl -FU../../tmp -dUSE_SDL2 -dUSE_OPENGL -dUSE_SDLMIXER -dUSE_MINIUPNPC Doom2DF.lpr
   
   # Clearing tmp
   rm -r ../../tmp && mkdir ../../tmp
 
   # Second - headless binary (for dedicated server)
-  fpc -g -gl -FU../../tmp -dUSE_SYSSTUB -dUSE_SDLMIXER -dHEADLESS -oDoom2DF_H Doom2DF.lpr
+  fpc -g -gl -FU../../tmp -dUSE_SYSSTUB -dUSE_SDLMIXER -dUSE_MINIUPNPC -dHEADLESS -oDoom2DF_H Doom2DF.lpr
   
   cp Doom2DF ../../../
   cp Doom2DF_H ../../../
@@ -69,4 +69,9 @@ package() {
   install -Dm644 doom2df.desktop "${pkgdir}"/usr/share/applications/doom2df.desktop
   install -Dm644 doom2df.png "${pkgdir}"/usr/share/pixmaps/doom2df.png
   install -Dm644 d2df.1.gz "${pkgdir}"/usr/share/man/man1/d2df.1.gz
+  install -Dm644 d2df.2.gz "${pkgdir}"/usr/share/man/man2/d2df.2.gz
+  install -Dm644 d2df.3.gz "${pkgdir}"/usr/share/man/man3/d2df.3.gz
+  install -Dm644 d2df.1.ru.gz "${pkgdir}"/usr/share/man/ru/man1/d2df.1.gz
+  install -Dm644 d2df.2.ru.gz "${pkgdir}"/usr/share/man/ru/man2/d2df.2.gz
+  install -Dm644 d2df.3.ru.gz "${pkgdir}"/usr/share/man/ru/man3/d2df.3.gz
 }

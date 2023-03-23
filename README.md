@@ -5,6 +5,13 @@ This repo contains PKGBUILDs for Doom 2D Forever, what posted in AUR.
 * doom2df-res - resources for game;
 * doom2df-editor - map editor for game (**BROKEN WORK**)
 
+Also, we providing some PKGBUILDs for classic version:
+
+* flatwaifu - modern port by DeaDDooMER;
+* doom2d-rembo - modern port by Rembo;
+* doom2d-res - resources for game;
+* doom2d-vcd - modern port by ketmar (**BROKEN BUILD**)
+
 ## About editor
 Actually, editor does not know how to search for files all over the file system or in special directories (/usr/share/doom2df or /home/<user>/.doom2df, etc), so it is possible to build the editor, but only by copying the binary and resources to "/home/<user>/.doom2df". Otherwise, the game will not see your custom maps. As soon as the problem is fixed, I will immediately post PKGBUILD on AUR.
 

@@ -1,17 +1,17 @@
 # Maintainer: Dmitry Lyashuk <lyashuk.voxx at gmail dot com>
-pkgname=doom2df-editor-qt5
+pkgname=doom2df-editor-qt4
 pkgver=0.667
 pkgrel=1
-pkgdesc="Official map editor for Doom 2D: Forever, qt5 version."
+pkgdesc="Official map editor for Doom 2D: Forever, qt4 version."
 arch=(x86_64 i686)
 url="https://doom2d.org/"
 license=('GPL3')
 group=(doom2df-full)
-depends=(doom2df-res qt5-base qt5-imageformats qt5-networkauth qt5-x11extras libjpeg-turbo libpng gdk-pixbuf2 libxcb libx11 libgl)
-makedepends=(git fpc lazarus lazarus-gtk2 qt5pas)
+depends=(doom2df-res qt4 libxcb libx11 libgl)
+makedepends=(git fpc lazarus lazarus-gtk2 qt4pas)
 optdepends=('doom2df-bin: for testing/playing')
 provides=(doom2df-editor)
-conflicts=(doom2df-editor-gtk2 doom2df-editor-qt4)
+conflicts=(doom2df-editor-gtk2 doom2df-editor-qt5)
 source=(
   'git://repo.or.cz/d2df-editor.git'
   'doom2df-editor.desktop'
@@ -42,7 +42,7 @@ build() {
   export D2DF_BUILD_HASH="$(git rev-parse HEAD)"
   
   cd "src/editor"
-    lazbuild -ws=qt5 --bm=Debug Editor.lpi
+    lazbuild -ws=qt --bm=Debug Editor.lpi
   
   cd ../../bin
   cp editor ../../

@@ -11,7 +11,7 @@ depends=(doom2df-res cairo gtk2 libjpeg-turbo libpng gdk-pixbuf2 libxcb libx11 l
 makedepends=(git fpc lazarus lazarus-gtk2)
 optdepends=('doom2df-bin: for testing/playing')
 provides=(doom2df-editor)
-conflicts=(doom2df-editor-qt5)
+conflicts=(doom2df-editor-qt5 doom2df-editor-qt4)
 source=(
   'git://repo.or.cz/d2df-editor.git'
   'doom2df-editor.desktop'

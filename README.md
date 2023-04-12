@@ -3,7 +3,7 @@ This repo contains PKGBUILDs for Doom 2D Forever, what posted in AUR.
 
 * doom2df-bin - binaries for game;
 * doom2df-res - resources for game;
-* doom2df-editor - map editor for game (qt5 and gtk2 versions).
+* doom2df-editor - map editor for game (qt5, qt4 and gtk2 versions).
 
 Also, we providing some PKGBUILDs for classic version:
 

@@ -42,7 +42,7 @@ build() {
   export D2DF_BUILD_HASH="$(git rev-parse HEAD)"
   
   cd "src/editor"
-    lazbuild -ws=qt --bm=Debug Editor.lpi
+    lazbuild --ws=qt --bm=Debug Editor.lpi
   
   cd ../../bin
   cp editor ../../

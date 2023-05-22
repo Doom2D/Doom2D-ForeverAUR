@@ -16,11 +16,13 @@ source=(
   'git://repo.or.cz/d2df-editor.git'
   'doom2df-editor.desktop'
   'doom2df-editor.png'
+  'Doom2DF_E'
 )
 md5sums=(
   'SKIP'
-  '2db2ae17bd755bda1967e6f3fb26db3f'
-  '34f7646571a98a0027dc4f908f12369e'
+  '6e002827b10502fb00feab7d64a021f1'
+  '1ad21e89200ff2bdcae68935b43f53fd'
+  '52d00efd565ea0f92eb872d8ec39c23f'
 )
 options=(
   !strip
@@ -52,6 +54,7 @@ build() {
 package() {
   cd "${srcdir}"
   install -Dm755 editor "${pkgdir}"/usr/bin/editor
+  install -Dm755 Doom2DF_E "${pkgdir}"/usr/bin/Doom2DF_E
   install -Dm644 doom2df-editor.desktop "${pkgdir}"/usr/share/applications/doom2df-editor.desktop
   install -Dm644 doom2df-editor.png "${pkgdir}"/usr/share/pixmaps/doom2df-editor.png
 }

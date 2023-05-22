@@ -2,7 +2,7 @@
 Version=1.0
 Name=D2DF Map Editor
 Name[ru]= Редактор карт D2DF
-Exec=editor
+Exec=Doom2DF_E
 Icon=doom2df-editor
 Terminal=false
 Type=Application
